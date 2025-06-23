@@ -12,5 +12,5 @@ jobs:
     - name: Make test API call to Argo CD
       run: |
         echo "Checking Argo CD application list..."
-        curl -X GET https://your-org-name.us-west1.akuity.cloud/api/v1/applications \
-             -H "Authorization: Bearer ${{ secrets.AKUITY_ACCESS }}"
+        curl -k -X GET https://${{ secrets.AKUITY_ENDPOINT }}/api/v1/applications \
+          -H "Authorization: Bearer ${{ secrets.AKUITY_ACCESS }}"
