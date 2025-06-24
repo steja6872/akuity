@@ -13,4 +13,4 @@ jobs:
       run: |
         echo "Checking Argo CD application list..."
         curl -k -X GET https://${{ secrets.AKUITY_ENDPOINT }}/api/v1/applications \
-          -H "Authorization: Bearer ${{ secrets.AKUITY_ACCESS }}"
+          -H "Authorization: Bearer ${{ secrets.AKUITY_TOKEN }}"
